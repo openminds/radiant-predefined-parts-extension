@@ -1,0 +1,43 @@
+<%
+include_javascript 'controls'
+include_javascript 'admin/combobox'
+%>
+
+<% content_for :page_scripts do %>
+   PredefinedParts = <%= Radiant::Config['predefined_parts.parts'].to_s.inspect %>.split(/\s*,\s*/)
+<% end %>
+
+<% content_for :page_css do %>
+#parts_results ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 1px solid #666;
+}
+
+#parts_results li { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0 4px;
+	background-color: white;
+}	
+
+* html #parts_results ul {
+	position: relative;
+	height: 1%;
+}
+
+
+#parts_results li.selected {
+	color: #fff;
+	background: #004376;
+}
+
+#parts_field input {
+	width: 200px;
+}
+
+#popups .popup {
+	z-index: 5000;
+}
+<% end %>

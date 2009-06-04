@@ -1,0 +1,10 @@
+= Predefined Parts Extension
+
+This extension overrides the default add-part popup to give the user a dropdown list of predefined parts, as well as allow him to add their own.
+
+== Installation
+
+To install this plugin get the source from github in your `vendor/extensions`. Then run the update `rake` task:
+  rake radiant:extensions:predefined_parts:update
+
+Which will copy all required files to your public directory.
